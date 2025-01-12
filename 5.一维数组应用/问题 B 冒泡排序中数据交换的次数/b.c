@@ -1,9 +1,10 @@
 #include<stdio.h>
+#define N 100
 void ReadData(int bubble[],int n);
 int BubbleSort(int bubble[],int n);
 int main(void)
 {
-    int t,i,j,n,bubble[100];
+    int t,i,j,n,bubble[N];
     scanf("%d",&t);
     for(i=1;i<=t;i++)
     {
@@ -27,7 +28,7 @@ int BubbleSort(int bubble[],int n)
     int flag=0;
     for(i=0;i<n-1;i++)
     {
-        for(k=0;k<n-1;k++)
+        for(k=0;k<n-1-i;k++)
         {
             if(bubble[k]>bubble[k+1])
             {
@@ -45,11 +46,3 @@ int BubbleSort(int bubble[],int n)
     }
     return count;
 }
-
-
-
-
-
-
-
-

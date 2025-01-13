@@ -20,11 +20,9 @@ int main(void)
         {
             for(i=m-1;i>=0;i--)
             {
-                if(i==0)
-                    printf("%d\n",a[i][j]);
-                else
-                    printf("%d ",a[i][j]);
+                printf("%d ",a[i][j]);
             }
+            printf("\n");
         }
     }
 }

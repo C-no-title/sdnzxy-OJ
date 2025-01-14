@@ -4,8 +4,8 @@
 #define N 100000
 int main(void)
 {
-    char str[N],temp[N];
-    int i,j,flag;
+    char str[N];
+    int i,j,flag,n;
     char *pstr=str;
     while(gets(pstr))
     {
@@ -13,19 +13,21 @@ int main(void)
             exit(0);
         for(i=0;pstr[i]!='\0';i++)
         {
-            if(pstr[i]==' ')
+            while(pstr[i]==' ')
             {
                 for(j=i;pstr[j]!='\0';j++)
                 {
-                    pstr[i]=pstr[i+1];
+                    pstr[j]=pstr[j+1];
                 }
+
             }
         }
+
+        n=strlen(pstr);
         flag=1;
-        strcpy(temp,pstr);
-        for(i=0;str[i]!='\0';i++)
+        for(i=0;i!=n-1-i&&i!=n-i;i++)
         {
-            if(temp[strlen(pstr)-1-i]!=pstr[i])
+            if(pstr[i]!=pstr[n-1-i])
             {
                 flag=0;
                 break;
